@@ -117,7 +117,7 @@
                     transition: 0.2s ease-out;
                 }
                 &:hover{
-                    background-color: var(--dark-alt);
+                    background-color: rgba(0, 0, 0, 0.603);
                     .material-icons, .text{
                         color: var(--primary);
                     }

@@ -23,16 +23,8 @@
             <span class="text">About</span>
         </router-link>
         <router-link class="button" to="/events">
-            <span class="material-icons">event_available</span>
-            <span class="text">Events</span>
-        </router-link>
-        <router-link class="button" to="/buy">
-            <span class="material-icons">shopping_cart</span>
-            <span class="text">Buy</span>
-        </router-link>
-        <router-link class="button" to="/contact">
-            <span class="material-icons">contacts</span>
-            <span class="text">Contact</span>
+            <span class="material-icons">library_music</span>
+            <span class="text">Audio Books</span>
         </router-link>
     </div>
   </aside>
@@ -70,14 +62,14 @@
         }
         .menu-toggle-wrap{
             display: flex;
-            justify-content: flex-end;
+            justify-content: center;
             margin-bottom: 1rem;
             position: relative;
             top: 0;
             transition: 0.2s ease-out;
             .menu-toggle{
                 transition: 0.2s ease-out;
-
+               
                 .material-icons{
                     font-size: 2rem;
                     color: var(--light);
@@ -98,7 +90,7 @@
             transition: 0.3s ease-out;
         }
         .menu{
-            margin: auto -1rem;
+            margin: 10rem -1rem;
             .button{
                 display: flex;
                 align-items: center;

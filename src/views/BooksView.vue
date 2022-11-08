@@ -97,7 +97,7 @@ export default{
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" require>
 .books{
     margin:0 auto;
   &__main_title{

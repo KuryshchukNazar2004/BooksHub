@@ -131,7 +131,7 @@ export default{
 }
 </script>
 
-<style lang="scss" >
+<style lang="scss" require>
   body{
     background: linear-gradient(180deg, #3A2B1A 0%, rgba(143, 103, 60, 0.94) 100%);
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;

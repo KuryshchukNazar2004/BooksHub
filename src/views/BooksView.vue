@@ -9,7 +9,7 @@
           <div class="books__contain">
             <div class="books__list">
               <div 
-              v-for="(book) in list" v-bind:key="book.id"
+              v-for="(book,songIndex) in list" v-bind:key="book.id"
               v-on:click="playSong(songIndex)"
                 class="books__content"
               >
@@ -82,18 +82,18 @@ export default{
                     name: "Fire & Blood(HBO Tie-in Edition)",
                     artistName: "George R. R. Martin",
                     year: 2018,
-                    src:`https://s3-alpha-sig.figma.com/img/9de8/b808/252883309ac46ad41531e8f7898c69b1?Expires=1665964800&Signature=T2FQDdhaJ54KbmziIP5iPJ5xbSMcqekeFpX7RlFzqqKfKKebyCYEY~efbcdZJN9zYpLexxEa2KRYbieJHGrP3DFNbikf-7883tdgztJOBvSmP--cv~grQIROzoLkhFdYaXU7TVzOU7sHC1eh45v5H5m7TUsHeeNV67xBaf1ntMUZm-tAx7NzVX8WH3zeoQlCyoHMA66ZhVYhL93bLhNlQ5WSAPlqt5~s4KMA1rX~TUqJVoLI~RYQr~Y2RIzIFENUlX3GyHGqmJYHynqJPozk~Fk1ABflsgPcHDPL~mtQUtP4eE2LM7an16CG94QRIjSZWD6B-GQ3KYwW2h2EUkAClA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA`,
+                    src:`https://freeaudiobooksonline.net/wp-content/uploads/2022/08/The-Chronicles-of-Narnia-audiobook-5-The-Horse-and-His-Boy.jpg`,
                     booksSrc: `https://open.spotify.com/track/1k0UHV7u1Myfo4wBgjr4CS?si=ab040e64e8ca4d2c`
                 },
             ]
         };
     },
-    methods:{
-      showBooks:function(){
-        url("booksSrc")
-      },
-    },
-    name: "books"
+    // methods:{
+    //   showBooks:function(){
+    //     url("booksSrc")
+    //   },
+    // },
+    // name: "books"
 }
 </script>
 

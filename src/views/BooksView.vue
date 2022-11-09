@@ -1,4 +1,5 @@
 <template>
+    <Sidebar/>
   <div class="books">
     <h1 class="books__main_title">Книги Бестселери</h1>
     <h3 class="books__title_desc">Найпопулярніші художні та публіцистичні книги Нью-Йорка. 25 вересня 2022 р.</h3>  
@@ -37,10 +38,11 @@
   
 </template>
 
+<script setup>
+  import Sidebar from '../components/Sidebar.vue';
+
+</script>
 <script>
-// import { url } from 'inspector';
-
-
 export default{
     data() {
         return {

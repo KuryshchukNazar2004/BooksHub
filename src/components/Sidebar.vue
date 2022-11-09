@@ -26,6 +26,10 @@
             <span class="material-icons">library_music</span>
             <span class="text">Audio Books</span>
         </router-link>
+        <router-link class="button" to="/logout">
+            <span class="material-icons">logout</span>
+            <span class="text">Log out</span>
+        </router-link>
     </div>
   </aside>
 </template>

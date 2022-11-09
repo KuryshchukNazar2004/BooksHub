@@ -1,4 +1,5 @@
 <template>
+  <Sidebar/>
   <main class="home-page">
     <header>
       <div class="player">
@@ -29,8 +30,11 @@
   </main>
 </template>
 
+<script setup>
+  import Sidebar from '../components/Sidebar.vue';
+</script>
 <script>
-export default{
+export default{ 
   name: 'HomeView',
   data() {
     return{

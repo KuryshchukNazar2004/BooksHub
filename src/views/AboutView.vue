@@ -1,5 +1,6 @@
 
 <template>
+    <Sidebar/>
   <main class="about">
     <div class="about__main_text">
       <h1 class="about__main_text_title">
@@ -255,6 +256,11 @@
   </section>
   </main>
 </template>
+<script setup>
+  import Sidebar from '../components/Sidebar.vue';
+
+</script>
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 <style lang="scss" require>
 .about{
@@ -350,6 +356,7 @@
 .contact_card{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   .profile-card{
     box-shadow:0 18px 200px -60px black;
     border-radius: 50px;

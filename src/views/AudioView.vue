@@ -1,4 +1,5 @@
 <template>
+    <Sidebar/>
   <div class="audio">
     <h1 class="audio__main_title">Аудіо - Книги Бестселери</h1>
     <h3 class="audio__title_desc">Шукаєте наступне чудове прослуховування? <br> Почніть із топ-100 бестселерів. </h3>  
@@ -39,6 +40,11 @@
   </div>
   
 </template>
+
+<script setup>
+  import Sidebar from '../components/Sidebar.vue';
+
+</script>
 
 <script>
 import AudioPlayer from "./Audio/AudioPlayer.vue";

@@ -4,23 +4,46 @@
       <h1 id="Login-txt">Вхід до акаунту</h1>
       <form action="">
         <div id="inpt">
-          <input type="text" placeholder="Email"  name="Login" id="input">
+          <input type="text" placeholder="Email"  name="Login" class="input" v-model="email" >
           <br>
-          <input type="text" placeholder="Пароль" name="Password" id="input">
+          <input type="text" placeholder="Пароль" v-model="password"  class="input" name="Password">
           <div id="back-btn">
-            <button id="login-btn">Login</button>
+            <a href="/Home"><button id="login-btn" @click="register">Login</button></a>
           </div>
-          <a href="" id="link"><p >Немає аккаунту? Створіть його!</p></a>
+          <a href="/registration" id="link"><p >Немає аккаунту? Створіть його!</p></a>
         </div>
       </form>
     </srction>
   </main>
 </template>
 
-<script>
-export default {
 
-}
+
+
+<script setup>
+  import{ref} from "vue";
+  import{getAuth, signInWithEmailAndPassword} from "firebase/auth";
+  //import { useRouter } from 'vue-router'
+
+  const email = ref("");
+  const password = ref("");
+  //const router = useRouter();
+
+  const register = () => {
+      const auth = getAuth()
+      signInWithEmailAndPassword(getAuth(), email.value, password.value)
+      .then((data) => {
+          console.log("Successfully signed in!")
+          console.log(auth.currentUser)
+      }) 
+      .catch((error) => {
+          console.log(error.code);
+          alert(error.message);
+      })
+  };
+  const signInWithGoogle = () => {
+
+  };
 </script>
 
 <style  require>
@@ -45,7 +68,7 @@ export default {
     color: #FFFFFF;
   }
 
-  #input
+  .input
   {
     position: relative;
     width: 562px;

@@ -10,7 +10,7 @@
         </button>
     </div>
     <div class="menu">
-        <router-link class="button" to="/">
+        <router-link class="button" to="/Home">
             <span class="material-icons">home</span>
             <span class="text">Home</span>
         </router-link>

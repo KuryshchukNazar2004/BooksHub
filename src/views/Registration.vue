@@ -1,69 +1,38 @@
 <template>
-  
-    <!--
-        <nav>
-<router-link to="/">Home</router-link>
-    <router-link to="/feed">Feed</router-link>
-    <router-link to="/registration">Register</router-link>
-    <router-link to="/">Login</router-link>
-    <button @click="handlesSignOut" v-if="isLoggedIn">Sign out</button>
-    </nav>
-    -->
-    <main class="login">
+  <main class="login">
     <srction class="forms">
       <h1 id="Login-txt">Створіть обліковий запис і почніть читати</h1>
       <form action="">
         <div id="inpt">
-          <input type="text" placeholder="Email" name="Login" id="input">
-          <input type="text" name="Password" placeholder="Пароль" id="input">
+          <input type="text" placeholder="Email" class="input" v-model="email" />
+          <input type="password" placeholder="Password" class="input"  v-model="password"  />
           <div id="back-btn">
-            <button id="login-btn">Зареєструватися</button>
+            <button @click = "register" id="login-btn">Зареєструватися</button>
           </div>
-          <a href="" id="link"><p >У вас вже є обліковий запис?</p></a>
+          <a href="/Login" id="link"><p >У вас вже є обліковий запис?</p></a>
         </div>
       </form>
     </srction>
   </main>
 </template>
-
    
 <script setup>
-    import { ref } from "vue";
-    import { 
-        getAuth, 
-        createUserWithEmailAndPassword,
-        GoogleAuthProvider,
-        signInWithPopup,
-    } from "firebase/auth";
-    const email = ref("");
-    const password = ref("");
-    // const router = useRouter("");
-    const register = () => {
-        createUserWithEmailAndPassword(getAuth(), email.value, password.value)
-        .then((data) => { 
-            constole.log("Successfully registered");
-            router.push('/feed')
-        })
+  import { ref } from "vue";
+  import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+  const email = ref("");
+  const password = ref("");
+  const register = () => {
+    createUserWithEmailAndPassword(getAuth(), email.value, password.value)
+    .then((data) => {
+      console.log("Successfully registered!");
+    })
     .catch((error) => {
-        console.log(error.code);
-        alert(error.message);
-    });
-    };
-
-    const signInWithGoogle = () => {
-        const provider = new GoogleAuthProvider();
-        signInWithPopup(getAuth(), provider)
-        .then((result) => {
-            console.log(result.user);
-            router.push("/");
-        })
-        .catch((error) => {
-
-        })
-    };
+      console.log(error.code)
+    }
+  )}
 </script>
 
-<style require >
+<style>
  body{
     background-image: url(../assets/img/Library1.png);
     
@@ -85,7 +54,7 @@
     color: #FFFFFF;
   }
 
-  #input
+  .input
   {
     position: relative;
     width: 562px;
@@ -112,7 +81,7 @@
     position: absolute;
     max-width: 215px;
     max-height: 33px;
-    margin-left: 15px;
+    margin-left: 13px;
     font-family: 'Roboto';
     padding-bottom: 20px;
     text-align: center;
@@ -144,7 +113,6 @@
     font-weight: 700;
     font-size: 10px;
     line-height: 128%;
-    /* or 13px */
     text-align: center;
     letter-spacing: 0.085em;
     color: #FFFFFF;

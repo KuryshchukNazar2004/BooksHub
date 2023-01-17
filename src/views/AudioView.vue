@@ -164,7 +164,6 @@ export default{
   &__name{
     display: block;
     font-size: 16px;
-    font-family: 'Kyiv*Type Serif';
     font-style: normal;
     font-weight: 350;
     text-align: left;
